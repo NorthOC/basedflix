@@ -1,5 +1,5 @@
 <h2 align='center'>Basedflix</h2>
-<i align='center'>"Netflix for the based"</i>
+<p align='center'><i>"Netflix for the based"</i></p>
 
 ## Dependencies:
 
