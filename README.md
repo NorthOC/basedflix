@@ -1,6 +1,14 @@
 <h2 align='center'>Basedflix</h2>
 <p align='center'><i>"Netflix for the based"</i></p>
 
+![chad virgin comparison](.github/chad.webp)
+
+## Contributors
+
+<a href="https://github.com/northoc/cliflix/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=northoc/cliflix" />
+</a>
+
 ## Dependencies:
 
 1. Python3 & pip
@@ -44,7 +52,9 @@ What this will do is simple:
 6. Add a PATH variable (for `~/.local/bin`) to ~/.bashrc
 7. Copy the file `basedflix.sh` to `~/.local/bin` as `basedflix`
 
-That is it. You can launch the program now by typing `basedflix` in your terminal.
+That is it! You can launch the program now by typing `basedflix` in your terminal.
+
+![pirate pepe](.github/pepe-pirate.png)
 
 ## Manual installation
 
@@ -61,6 +71,8 @@ The instructions for manual installation (if you choose not to install via `inst
 The JSON data is received from thepiratebay API. It is then parsed into an easily manageable array. Then the movies are displayed to the console. After that you select the movie and a supported media player. The webtorrent-cli then receives a info hash (imagine it as a shorter magnet link) and streams the torrent, on a chosen video player.
 
 ## Roadmap
+
+![pirate map](.github/pirate-map.jpeg)
 
 - Create JSON parser (done)
 - Create Streamer (done)
