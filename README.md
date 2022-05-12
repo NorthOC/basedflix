@@ -56,7 +56,7 @@ cd basedflix
 ```
 What this will do is simple:
 1. Create a virtual Python environment `venv`
-2. Install pip modules form `requirements.txt`
+2. Install pip modules form `requirements.txt` to the virtual environment
 3. Find the location of the `main.py` file on your computer
 4. Add that location to `basedflix.sh`
 5. Check and create (if not found) `~/.local/bin` directory
