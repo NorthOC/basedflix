@@ -27,16 +27,18 @@ sudo npm install webtorrent-cli -g
 
 ## Supported Video players
 
-airplay     Apple TV                       
-chromecast  Google Chromecast              
-dlna        DNLA                           
-mplayer     MPlayer                        `sudo apt install mplayer`
-mpv         MPV                            `sudo apt install mpv`
-omx         OMX                            
-vlc         VLC                            `sudo apt install vlc`
-iina        IINA                           
-smplayer    SMPlayer                       `sudo apt install smplayer`
-xbmc        XBMC                           
+| Player (CLI command) | Player name | Install via apt package manager |
+|----------------------|-------------|---------------------------------|
+| airplay              | Apple TV    |                                 |
+| chromecast           | Chromecast  |                                 |
+| dlna                 | DLNA        |                                 |
+| mplayer              | mplayer     | `sudo apt install mplayer`      |
+| mpv                  | MPV         | `sudo apt install mpv`          |
+| omx                  | OMX         |                                 |
+| vlc                  | VLC         | `sudo apt install vlc`          |
+| iina                 | IINA        |                                 |
+| smplayer             | SMPlayer    | `sudo apt install smplayer`     |
+| xbmc                 | XBMC        |                                 |
 
 ## Quick install
 
