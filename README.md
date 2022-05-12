@@ -35,7 +35,7 @@ What this will do is simple:
 
 You can modify `install.sh` to not include the PATH addition to `.bashrc` and change the directory to where `basedflix` should be copied (I left some helpful comments ^_^ )
 
-The instructions for manual installation can be found inside the file `basedflix.sh` 
+The instructions for manual installation (if you choose not to install via `install.sh`) can be found inside the file `basedflix.sh` 
 
 ## Important Note
 
