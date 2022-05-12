@@ -1,5 +1,5 @@
 <h2 align='center'>Basedflix</h2>
-<em align='center'>"Netflix for the based"</em>
+<i align='center'>"Netflix for the based"</i>
 
 ## Dependencies:
 
@@ -7,7 +7,7 @@
 
 2. npm and nodejs using the apt package manager:
 ```bash
-sudo apt-get install npm
+sudo apt-get install npm #installs both npm and nodejs
 ```
 
 3. webtorrent-cli:
@@ -24,7 +24,7 @@ cd basedflix
 ```
 What this will do is simple:
 1. Create a virtual Python environment `venv`
-2. Install pip modules form requirements.txt
+2. Install pip modules form `requirements.txt`
 3. Find the location of the `main.py` file on your computer
 4. Add that location to `basedflix.sh`
 5. Check and create (if not found) `~/.local/bin` directory
