@@ -79,11 +79,6 @@ The JSON data is received from thepiratebay API. It is then parsed into an easil
 
 ## Roadmap
 
-<div align='center'>
-
-![google gps marker](.github/roadmap.png)
-</div>
-
 - Create JSON parser (done)
 - Create Streamer (done)
 - Watch top 100 movies (done)
