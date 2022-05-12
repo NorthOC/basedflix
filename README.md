@@ -1,5 +1,58 @@
-Currently working on this project
+<h2 align='center'>Basedflix</h2>
+<em align='center'>"Netflix for the based"</em>
 
-The data is received from thepiratebay API, parsed
+## Dependencies:
 
-The webtorrent-cli then receives a a info hash and streams the torrent, based on a chosen video player.
+1. Python3 & pip
+
+2. npm and nodejs using the apt package manager:
+```bash
+sudo apt-get install npm
+```
+
+3. webtorrent-cli:
+```bash
+sudo npm install webtorrent-cli -g
+```
+
+## Quick install
+
+```bash
+git clone https://github.com/NorthOC/basedflix
+cd basedflix
+./install.sh
+```
+What this will do is simple:
+1. Create a virtual Python environment `venv`
+2. Install pip modules form requirements.txt
+3. Find the location of the `main.py` file on your computer
+4. Add that location to `basedflix.sh`
+5. Check and create (if not found) `~/.local/bin` directory
+6. Add a PATH variable (for `~/.local/bin`) to ~/.bashrc
+7. Copy the file `basedflix.sh` to `~/.local/bin` as `basedflix`
+
+## Manual installation
+
+You can modify `install.sh` to not include the PATH addition to `.bashrc` and change the directory to where `basedflix` should be copied (I left some helpful comments ^_^ )
+
+The instructions for manual installation can be found inside the file `basedflix.sh` 
+
+## Important Note
+
+*Use a vpn if your country has very strict laws on torrenting!*
+
+## How it works
+
+The JSON data is received from thepiratebay API. It is then parsed into an easily manageable array. Then the movies are displayed to the console. After that you select the movie and a supported media player. The webtorrent-cli then receives a info hash (imagine it as a shorter magnet link) and streams the torrent, on a chosen video player.
+
+## Roadmap
+
+- Create JSON parser (done)
+- Create Streamer (done)
+- Watch top 100 movies (done)
+- Install script (done)
+- Minimum viable product (done)
+- Video demo
+- Uninstall script
+- Watch any movie
+- Cross-platform support
