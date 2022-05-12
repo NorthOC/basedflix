@@ -1,7 +1,10 @@
 <h2 align='center'>Basedflix</h2>
 <p align='center'><i>"Netflix for the based"</i></p>
 
+<div align='center'>
+
 ![2 million bobs](.github/big-bob.jpg)
+</div>
 
 ## Contributors
 
@@ -76,7 +79,10 @@ The JSON data is received from thepiratebay API. It is then parsed into an easil
 
 ## Roadmap
 
+<div align='center'>
+
 ![google gps marker](.github/roadmap.png)
+</div>
 
 - Create JSON parser (done)
 - Create Streamer (done)
