@@ -15,6 +15,19 @@ sudo apt-get install npm #installs both npm and nodejs
 sudo npm install webtorrent-cli -g
 ```
 
+## Supported Video players
+
+airplay     Apple TV                       
+chromecast  Google Chromecast              
+dlna        DNLA                           
+mplayer     MPlayer                        `sudo apt install mplayer`
+mpv         MPV                            `sudo apt install mpv`
+omx         OMX                            
+vlc         VLC                            `sudo apt install vlc`
+iina        IINA                           
+smplayer    SMPlayer                       `sudo apt install smplayer`
+xbmc        XBMC                           
+
 ## Quick install
 
 ```bash
@@ -30,6 +43,8 @@ What this will do is simple:
 5. Check and create (if not found) `~/.local/bin` directory
 6. Add a PATH variable (for `~/.local/bin`) to ~/.bashrc
 7. Copy the file `basedflix.sh` to `~/.local/bin` as `basedflix`
+
+That is it. You can launch the program now by typing `basedflix` in your terminal.
 
 ## Manual installation
 
