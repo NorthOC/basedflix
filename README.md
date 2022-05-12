@@ -14,9 +14,13 @@
 </a>
 </div>
 
+## Description
+
+Select from the current top 100 movies HD section from The Pirate Bay in your Command Line Interface (Terminal) and stream it in seconds using a supported media player. If there are no subtitles, you can find some on the web and upload the .srt file to the media player.
+
 ## Dependencies:
 
-1. Python3 & pip
+1. Python3 & pip (also Python3.10-dev)
 
 2. npm and nodejs using the apt package manager:
 ```bash
