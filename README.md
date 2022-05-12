@@ -5,9 +5,11 @@
 
 ## Contributors
 
-<a align='center' href="https://github.com/northoc/cliflix/graphs/contributors">
+<div align='center'>
+<a href="https://github.com/northoc/cliflix/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=northoc/cliflix" />
 </a>
+</div>
 
 ## Dependencies:
 
