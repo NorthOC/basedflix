@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+unamestr=$(uname)
+if [[ "$unamestr" == 'Linux' ]]; then
+  SCRIPT_DIR=$(dirname $(readlink -f $0))
+elif [[ "$unamestr" == "Darwin" ]]; then
+  cmd=$(which "$0")
+  if [ -L "$cmd" ]; then
+    cmd=$(readlink "$cmd")
+  fi
+  SCRIPT_DIR=$(dirname "$cmd")
+else
+  echo "Only Linux and Mac OS X are supported!"
+  exit
+  
+fi
+
+cd $SCRIPT_DIR
+source ./venv/bin/activate
+python3 main.py
