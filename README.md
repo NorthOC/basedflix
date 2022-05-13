@@ -90,5 +90,9 @@ The JSON data is received from thepiratebay API. It is then parsed into an easil
 - Minimum viable product (done)
 - Video demo
 - Uninstall script
+- Install script options
 - Watch any movie
-- Cross-platform support
+- Rewrite in C/C++ to loose dependecies
+- UI
+- Search by category
+- Cross-platform
