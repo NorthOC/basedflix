@@ -20,17 +20,38 @@ Select from the current top 100 movies HD section from The Pirate Bay in your Co
 
 ## Dependencies:
 
-1. Python3 & pip (also Python3.10-dev)
+Everything is installed via `install.sh`, but if you need it for manual installation
 
-2. npm and nodejs using the apt package manager:
-```bash
-sudo apt-get install npm #installs both npm and nodejs
-```
+1. python3 python3-dev python3-pip npm
 
-3. webtorrent-cli:
+2. npm and nodejs:
+
+3. webtorrent-cli
+
 ```bash
 sudo npm install webtorrent-cli -g
 ```
+
+## Quick install
+
+```bash
+git clone https://github.com/NorthOC/basedflix
+cd basedflix
+./install.sh
+```
+What this will do is simple:
+1. Install dependencies
+1. Create a virtual Python environment `venv`
+2. Install form `requirements.txt` to the virtual environment
+3. Create a symlink `/usr/local/bin/basedflix`
+
+That is it! You can launch the program now by typing `basedflix` in your terminal.
+
+![pirate pepe](.github/pepe-pirate.png)
+
+## Important Note
+
+*Use a vpn if your country has very strict laws on torrenting!*
 
 ## Supported Video players
 
@@ -47,35 +68,6 @@ sudo npm install webtorrent-cli -g
 | smplayer             | SMPlayer    | `sudo apt install smplayer`     |
 | xbmc                 | XBMC        |                                 |
 
-## Quick install
-
-```bash
-git clone https://github.com/NorthOC/basedflix
-cd basedflix
-./install.sh
-```
-What this will do is simple:
-1. Create a virtual Python environment `venv`
-2. Install pip modules form `requirements.txt` to the virtual environment
-3. Find the location of the `main.py` file on your computer
-4. Add that location to `basedflix.sh`
-5. Check and create (if not found) `~/.local/bin` directory
-6. Add a PATH variable (for `~/.local/bin`) to ~/.bashrc
-7. Copy the file `basedflix.sh` to `~/.local/bin` as `basedflix`
-
-That is it! You can launch the program now by typing `basedflix` in your terminal.
-
-![pirate pepe](.github/pepe-pirate.png)
-
-## Manual installation
-
-You can modify `install.sh` to not include the PATH addition to `.bashrc` and change the directory to where `basedflix` should be copied (I left some helpful comments ^_^ )
-
-The instructions for manual installation (if you choose not to install via `install.sh`) can be found inside the file `basedflix.sh` 
-
-## Important Note
-
-*Use a vpn if your country has very strict laws on torrenting!*
 
 ## How it works
 
@@ -88,11 +80,11 @@ The JSON data is received from thepiratebay API. It is then parsed into an easil
 - Watch top 100 movies (done)
 - Install script (done)
 - Minimum viable product (done)
+- Simplify Install script (done)
 - Video demo
-- Uninstall script
-- Install script options
+- Uninstall script (done)
 - Watch any movie
-- Rewrite in C/C++ to loose dependecies
+- Rewrite in go or c lang to loose dependency on venv
 - UI
 - Search by category
 - Cross-platform
