@@ -1,5 +1,5 @@
 <h2 align='center'>Basedflix</h2>
-<p align='center'><i>"Stream any movie in seconds. Either search for a movie or select from the current top 100 movies from The Pirate Bay and stream it in seconds using a supported media player."</i></p>
+<p align='center'><i>"Stream any movie in seconds. Either search for a movie or select from the current top 100 movies from The Pirate Bay!"</i></p>
 
 <div align='center'>
 
