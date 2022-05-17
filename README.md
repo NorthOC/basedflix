@@ -68,6 +68,12 @@ That is it! You can launch the program now by typing `basedflix` in your termina
 
 Sometimes the movie comes with subtitles. However, if there are no subtitles, you can find some on the web and upload the .srt file to the media player.
 
+## Screenshots
+
+![Top 100](.github/screen1.png)
+
+![Batman](.github/screen2.png)
+
 ## How it works
 
 The JSON data is received from thepiratebay API. It is then parsed into an easily manageable array. Then the movies are displayed to the console. After that you select the movie and a supported media player. The webtorrent-cli then receives a magnet link and streams the torrent, on a chosen video player.
