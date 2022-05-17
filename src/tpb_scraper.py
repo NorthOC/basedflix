@@ -1,4 +1,3 @@
-from ast import parse
 import requests
 import json
 
