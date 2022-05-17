@@ -30,18 +30,22 @@ sudo npm install webtorrent-cli -g
 
 ## Quick install
 
+<i>"Requirements: the apt package manager"</i>
+
 ```bash
 git clone https://github.com/NorthOC/basedflix
 cd basedflix
 ./install.sh
 ```
 What this will do is simple:
-1. Install dependencies
+1. Install dependencies (using apt)
 1. Create a virtual Python environment `venv`
-2. Install form `requirements.txt` to the virtual environment
+2. Install from `requirements.txt` to the virtual environment
 3. Create a symlink `/usr/local/bin/basedflix`
 
 That is it! You can launch the program now by typing `basedflix` in your terminal.
+
+In case of manual installation, you can use these steps as a reference.
 
 ![pirate pepe](.github/pepe-pirate.png)
 
