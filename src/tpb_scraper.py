@@ -40,14 +40,14 @@ def info_to_arr(parsed):
 
         movies.append(item)
     
+    # print out movies
     counter = len(movies)
     movies.reverse()
-    # print out movies
     for item in movies:
         item = item.split(", ")
         print((str(counter) + ".").ljust(4), item[2], item[3], item[4], item[5])
         counter -= 1
 
     print()
-
+    movies.reverse()
     return movies

@@ -6,7 +6,9 @@ import subprocess
 # clear console
 subprocess.run("clear")
 
+# Search or top 100?
 query = sot.search_or_top()
+
 # parse data from apibay as a dictionary
 parsed_json = scrape.parse_me_matey(query)
 
@@ -14,10 +16,10 @@ parsed_json = scrape.parse_me_matey(query)
 parsed_array = scrape.info_to_arr(parsed_json)
 
 # select a movie
-info_hash = stream.select_movie(parsed_array)
+magnet_link = stream.select_movie(parsed_array)
 
 # select a media player
 selected_player = stream.select_player()
 
 # stream how much you want :)
-stream.stream_me_matey(info_hash, selected_player)
+stream.stream_me_matey(magnet_link, selected_player)
