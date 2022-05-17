@@ -17,9 +17,8 @@ def parse_me_matey(query):
 # output easily manageable array
 def info_to_arr(parsed):
     movies = []
-    counter = 1
 
-    for torrent in reversed(parsed):
+    for torrent in parsed:
         torrent_id = torrent["id"]
         magnet = torrent["info_hash"]
         name = torrent["name"]
@@ -28,22 +27,27 @@ def info_to_arr(parsed):
         leechers = torrent["leechers"]
 
         # format size of movie
-        if size_bytes > 1000000000:
+        if int(size_bytes) > 1000000000:
             prefixer = "GiB" 
-            size_xib = size_bytes / 1024 / 1024 / 1024
+            size_xib = int(size_bytes) / 1024 / 1024 / 1024
         else:
             prefixer = "MiB"
-            size_xib = size_bytes / 1024 / 1024
-
-        print((str(counter) + ".").ljust(4), name, str("%.2f" % size_xib) + " " + prefixer, seeders, leechers)
-        counter += 1
+            size_xib = int(size_bytes) / 1024 / 1024
 
         # movie is stored to array as id | magnet hash | name | size | seeders | leechers
         item = str(torrent_id) + ", " + magnet + ", " + name + ", "\
-             + str(size_bytes) + ", " + str(seeders) + ", " + str(leechers)
+             + str("%.2f" % size_xib) + f" {prefixer}" + ", " + "Seeders: " + str(seeders) + ", " + "Leechers: " + str(leechers)
 
         movies.append(item)
     
+    counter = len(movies)
+    movies.reverse()
+    # print out movies
+    for item in movies:
+        item = item.split(", ")
+        print((str(counter) + ".").ljust(4), item[2], item[3], item[4], item[5])
+        counter -= 1
+
     print()
 
     return movies

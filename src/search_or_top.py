@@ -10,7 +10,7 @@ def search_or_top():
     while x not in answers:
         x = input("Wrong input. Try again:")
 
-    if x == answers[0]:
-        query = input("Enter the movie title:")
+    if x == answers[1]:
+        query = input("Enter the movie title: ")
 
     return query

@@ -6,7 +6,7 @@ import subprocess
 # clear console
 subprocess.run("clear")
 
-query = sot.search_or_top
+query = sot.search_or_top()
 # parse data from apibay as a dictionary
 parsed_json = scrape.parse_me_matey(query)
 
