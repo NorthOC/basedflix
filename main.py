@@ -1,5 +1,5 @@
-import tpb_scraper as scrape
-import streamer as stream
+import src.tpb_scraper as scrape
+import src.streamer as stream
 import subprocess
 
 # clear console
