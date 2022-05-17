@@ -1,17 +1,23 @@
+from ast import parse
 import requests
 import json
 
-# scrape json api
-
+# scrape json api 
 def parse_me_matey(query):
-    if not query:
-        r = requests.get('https://apibay.org/precompiled/data_top100_207.json')
-    else:
-        r = requests.get(f"https://apibay.org/q.php?q={query}&cat=200")
+    while True:
+        if not query:
+            r = requests.get('https://apibay.org/precompiled/data_top100_207.json')
+        else:
+            r = requests.get(f"https://apibay.org/q.php?q={query}&cat=200")
 
-    content = r.content
-    parsed = json.loads(content)
-    return parsed
+        content = r.content
+        parsed = json.loads(content)
+
+        if parsed[0]["id"] == "0":
+            print("No movie was found. Maybe there was a typo?")
+            query = input("Enter the movie title: ")
+        else:
+            return parsed
 
 
 # output easily manageable array
