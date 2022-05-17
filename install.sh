@@ -8,8 +8,14 @@ if [ $(which apt-get) ]; then
   sudo apt-get -y install python3 
   sudo apt-get -y install python3-dev
   sudo apt-get -y install python3-pip
-  sudo apt-get -y install npm
-  sudo npm install webtorrent-cli -g
+
+  if ! command -v npm &> /dev/null; then
+  	sudo apt-get -y install npm
+  	sudo npm install webtorrent-cli -g
+  else
+	npm install webtorrent-cli -g
+  fi
+
   sudo pip3 install virtualenv
  
 else
