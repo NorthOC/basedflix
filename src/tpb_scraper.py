@@ -2,8 +2,13 @@ import requests
 import json
 
 # scrape json api
-def parse_me_matey():
-    r = requests.get('https://apibay.org/precompiled/data_top100_207.json')
+
+def parse_me_matey(query):
+    if not query:
+        r = requests.get('https://apibay.org/precompiled/data_top100_207.json')
+    else:
+        r = requests.get(f"https://apibay.org/q.php?q={query}&cat=200")
+
     content = r.content
     parsed = json.loads(content)
     return parsed
@@ -14,7 +19,7 @@ def info_to_arr(parsed):
     movies = []
     counter = 1
 
-    for torrent in parsed:
+    for torrent in reversed(parsed):
         torrent_id = torrent["id"]
         magnet = torrent["info_hash"]
         name = torrent["name"]
