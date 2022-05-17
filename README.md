@@ -1,5 +1,5 @@
 <h2 align='center'>Basedflix</h2>
-<p align='center'><i>"Netflix for the based"</i></p>
+<p align='center'><i>"Stream any movie in seconds. Either search for a movie or select from the current top 100 movies from The Pirate Bay and stream it in seconds using a supported media player."</i></p>
 
 <div align='center'>
 
@@ -13,10 +13,6 @@
   <img src="https://contrib.rocks/image?repo=northoc/cliflix" />
 </a>
 </div>
-
-## Description
-
-Select from the current top 100 movies HD section from The Pirate Bay in your Command Line Interface (Terminal) and stream it in seconds using a supported media player. If there are no subtitles, you can find some on the web and upload the .srt file to the media player.
 
 ## Dependencies:
 
@@ -68,10 +64,13 @@ That is it! You can launch the program now by typing `basedflix` in your termina
 | smplayer             | SMPlayer    | `sudo apt install smplayer`     |
 | xbmc                 | XBMC        |                                 |
 
+## Subtitles
+
+Sometimes the movie comes with subtitles. However, if there are no subtitles, you can find some on the web and upload the .srt file to the media player.
 
 ## How it works
 
-The JSON data is received from thepiratebay API. It is then parsed into an easily manageable array. Then the movies are displayed to the console. After that you select the movie and a supported media player. The webtorrent-cli then receives a info hash (imagine it as a shorter magnet link) and streams the torrent, on a chosen video player.
+The JSON data is received from thepiratebay API. It is then parsed into an easily manageable array. Then the movies are displayed to the console. After that you select the movie and a supported media player. The webtorrent-cli then receives a magnet link and streams the torrent, on a chosen video player.
 
 ## Roadmap
 
@@ -83,8 +82,6 @@ The JSON data is received from thepiratebay API. It is then parsed into an easil
 - Simplify Install script (done)
 - Video demo
 - Uninstall script (done)
-- Watch any movie
-- Rewrite in go or c lang to loose dependency on venv
-- UI
-- Search by category
-- Cross-platform
+- Watch any movie (done)
+- GUI
+- Long-term support
