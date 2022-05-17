@@ -32,6 +32,8 @@ sudo npm install webtorrent-cli -g
 
 <i>"Requirements: the apt package manager"</i>
 
+<i>"Current Issue: Jammy Jellyfish cannot install npm via the apt package manager due to a required out-of-date dependency"</i>
+
 ```bash
 git clone https://github.com/NorthOC/basedflix
 cd basedflix

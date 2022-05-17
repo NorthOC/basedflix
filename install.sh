@@ -5,7 +5,10 @@ set -eu
 
 if [ $(which apt-get) ]; then
   echo "installing dependencies for Ubuntu..."
-  sudo apt-get -y install python3 python3-dev python3-pip npm
+  sudo apt-get -y install python3 
+  sudo apt-get -y install python3-dev
+  sudo apt-get -y install python3-pip
+  sudo apt-get -y install npm
   sudo npm install webtorrent-cli -g
   sudo pip3 install virtualenv
  
