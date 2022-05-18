@@ -47,7 +47,7 @@ What this will do is simple:
 
 That is it! You can launch the program now by typing `basedflix` in your terminal.
 
-In case of manual installation, you can use these steps as a reference.
+In case of manual installation, you can use these steps as a reference. To install npm, use a node version manager like [nvm](https://github.com/nvm-sh/nvm)
 
 ![pirate pepe](.github/pepe-pirate.png)
 
