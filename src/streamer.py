@@ -45,7 +45,11 @@ def select_player():
 
 
 # stream the video matey
-def stream_me_matey(magnet, player) -> None:
+def stream_me_matey(magnet, player, gui=False):
+
+    if player == "-":
+        print("No player selected")
+        return False
 
     # checks if you have the player
     try:
@@ -53,6 +57,9 @@ def stream_me_matey(magnet, player) -> None:
     except FileNotFoundError:
         print("\nThe player {} was not found on your system.".format(player))
         print("You could try installing it with: sudo apt install {}".format(player))
-        return
+        return False
 
-    subprocess.run(["webtorrent", f"{magnet}", f"--{player}"] )
+    if not gui:
+        subprocess.run(["webtorrent", f"{magnet}", f"--{player}"] )
+    return True
+
