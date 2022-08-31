@@ -95,3 +95,5 @@ The JSON data is received from thepiratebay API. It is then parsed into an easil
 - Video demo
 - Uninstall script (done)
 - Watch any movie (done)
+- GUI (done)
+- TODO: Update install script
