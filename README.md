@@ -16,7 +16,7 @@
 
 ## Dependencies:
 
-1. python3 python3-dev python3-pip npm
+1. python3 python3-dev python3-pip
 
 2. npm and nodejs (can be installed using [nvm](https://github.com/nvm-sh/nvm))
 
