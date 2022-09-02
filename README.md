@@ -16,11 +16,9 @@
 
 ## Dependencies:
 
-Everything is installed via `install.sh`, but if you need it for manual installation
-
 1. python3 python3-dev python3-pip npm
 
-2. npm and nodejs:
+2. npm and nodejs (can be installed using [nvm](https://github.com/nvm-sh/nvm))
 
 3. webtorrent-cli
 
@@ -30,26 +28,20 @@ sudo npm install webtorrent-cli -g
 
 ## Quick install
 
-<i>"Requirements: the apt package manager"</i>
-
-<i>"Current Issue: Jammy Jellyfish cannot install npm via the apt package manager due to a required out-of-date dependency"</i>
-
 ```bash
 git clone https://github.com/NorthOC/basedflix
 cd basedflix
 ./install.sh
 ```
 What this will do is simple:
-1. Install dependencies (using apt)
+1. Install dependencies
 1. Create a virtual Python environment `venv`
 2. Install from `requirements.txt` to the virtual environment
 3. Create a symlink `/usr/local/bin/basedflix`
 
-That is it! You can launch the program now by typing `basedflix` in your terminal.
-
-In case of manual installation, you can use these steps as a reference. To install npm, use a node version manager like [nvm](https://github.com/nvm-sh/nvm)
-
 ![pirate pepe](.github/pepe-pirate.png)
+
+That is it! You can launch the program now by typing `basedflix` in your terminal.
 
 ## Important Note
 
@@ -70,6 +62,8 @@ In case of manual installation, you can use these steps as a reference. To insta
 | smplayer             | SMPlayer    | `sudo apt install smplayer`     |
 | xbmc                 | XBMC        |                                 |
 
+GUI version only supports mpv and vlc.
+
 ## Subtitles
 
 Sometimes the movie comes with subtitles. However, if there are no subtitles, you can find some on the web and upload the .srt file to the media player.
@@ -79,10 +73,6 @@ Sometimes the movie comes with subtitles. However, if there are no subtitles, yo
 ![Top 100](.github/screen1.png)
 
 ![Batman](.github/screen2.png)
-
-## How it works
-
-The JSON data is received from thepiratebay API. It is then parsed into an easily manageable array. Then the movies are displayed to the console. After that you select the movie and a supported media player. The webtorrent-cli then receives a magnet link and streams the torrent, on a chosen video player.
 
 ## Roadmap
 

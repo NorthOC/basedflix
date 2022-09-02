@@ -18,6 +18,9 @@ def clickButton(event):
     if widget != root:
         widget.invoke()
 
+def searcher(event):
+    search_btn.invoke()
+
 
 def stream_movie(event):
 
@@ -153,11 +156,6 @@ movie_list.column("movie_leechers",anchor="center", width=0)
 
 movie_list.place(relheight=1, relwidth=1)
 
-
-#search bar
-entry = tk.Entry(frame_top)
-entry.place(relheight=1, relwidth=0.5, relx=0)
-
 search_btn = tk.Button(frame_top, text="Search", 
                     command=lambda:display_movies(movie_list, get_movies(entry.get())))
 
@@ -166,6 +164,11 @@ search_btn.place(relheight=1, relwidth=0.15, relx=0.51)
 top_btn = tk.Button(frame_top, text="Top 100", 
                     command=lambda:display_movies(movie_list, get_movies(clear=True)))
 top_btn.place(relheight=1, relwidth=0.15, relx=0.68)
+
+#search bar
+entry = tk.Entry(frame_top)
+entry.place(relheight=1, relwidth=0.5, relx=0)
+entry.bind("<Return>", searcher)
 
 # debug
 def ok(event):
