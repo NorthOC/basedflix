@@ -134,37 +134,37 @@ root.configure(bg="#202124")
 
 # styling list
 style = ttk.Style()
-style.configure("TCombobox", borderwidth=0, highlightthickness=0, arrowcolor="white")
-style.map("TCombobox", 
-                relief="flat",
-                selectbackground= [('readonly','#303134')],
-                selectforeground= [('readonly',"#bdc1c6")],
-                selectborderwidth= [('readonly',0)],
-                foreground= [('readonly',"#bdc1c6")],
-                fieldbackground= [('readonly','#303134')],
-                borderthickness= [('readonly',0)],
-                highlightthickness= [('readonly',0)],
-                background= [('readonly','#303134')])
+#style.configure("TCombobox", borderwidth=0, highlightthickness=0, arrowcolor="white")
+#style.map("TCombobox", 
+#                relief="flat",
+#                selectbackground= [('readonly','#303134')],
+#                selectforeground= [('readonly',"#bdc1c6")],
+#                selectborderwidth= [('readonly',0)],
+#                foreground= [('readonly',"#bdc1c6")],
+#                fieldbackground= [('readonly','#303134')],
+#                borderthickness= [('readonly',0)],
+#                highlightthickness= [('readonly',0)],
+#                background= [('readonly','#303134')])
 
-style.configure("Treeview", background="#303134", highlightthickness=0,
- foreground="#bdc1c6", fieldbackground="#303134", borderwidth=0)
-style.configure("Treeview.Heading", background="#303134", foreground="#bdc1c6", borderwidth=1, relief="solid")
-style.map("Treeview.Heading",
-                background = [('pressed', '!focus',"#303134" ),
-                              ('active', "#303134"),
-                              ('disabled', '#303134')],
-                foreground = [('pressed', '!focus',"#bdc1c6" ),
-                              ('active', "#bdc1c6"),
-                              ('disabled', '#bdc1c6')])
-style.map('Treeview', background=[('selected', '#3c4043')])
+#style.configure("Treeview", background="#303134", highlightthickness=0,
+# foreground="#bdc1c6", fieldbackground="#303134", borderwidth=0)
+#style.configure("Treeview.Heading", background="#303134", foreground="#bdc1c6", borderwidth=1, relief="solid")
+#style.map("Treeview.Heading",
+#                background = [('pressed', '!focus',"#303134" ),
+#                              ('active', "#303134"),
+#                              ('disabled', '#303134')],
+#                foreground = [('pressed', '!focus',"#bdc1c6" ),
+#                              ('active', "#bdc1c6"),
+#                              ('disabled', '#bdc1c6')])
+#style.map('Treeview', background=[('selected', '#3c4043')])
 
 style.layout('arrowless.Vertical.TScrollbar', 
          [('Vertical.Scrollbar.trough',
            {'children': [('Vertical.Scrollbar.thumb', 
                           {'expand': '1', 'sticky': 'nswe'})],
             'sticky': 'ns'})])
-style.configure('TScrollbar', troughcolor="#202124", borderwidth=0, highlightthickness=0, arrowcolor="green") 
-style.configure('CustomScroll.Horizontal.TScrollbar',background='blue')
+#style.configure('TScrollbar', troughcolor="#202124", borderwidth=0, highlightthickness=0, arrowcolor="green") 
+#style.configure('CustomScroll.Horizontal.TScrollbar',background='blue')
 
 # upper bar for search and buttons
 frame_top = tk.Frame(root, bg="#202124")
@@ -207,17 +207,17 @@ p_label = tk.Label(root, text="Player:", background="#202124", foreground="#e8ea
 s_label.place(relx=0.1, rely=0.06)
 p_label.place(relx=0.76, rely=0.06)
 
-search_btn = tk.Button(frame_top, text="Search", bg="#303134", fg="#e8eaed", borderwidth=0, activebackground="#404144",activeforeground="#e8eaed",highlightbackground="#5f6063", highlightcolor="#7a7c80",
+search_btn = tk.Button(frame_top, text="Search",
                     command=lambda:display_movies(movie_list, get_movies(entry.get())))
 
 search_btn.place(relheight=0.7, relwidth=0.15, relx=0.51)
 
-top_btn = tk.Button(frame_top, text="Top 100", bg="#303134", fg="#e8eaed", borderwidth=0, activebackground="#404144",activeforeground="#e8eaed",highlightbackground="#5f6063", highlightcolor="#7a7c80",
+top_btn = tk.Button(frame_top, text="Top 100",
                     command=lambda:display_movies(movie_list, get_movies(clear=True)))
 top_btn.place(relheight=0.7, relwidth=0.15, relx=0.67)
 
 #search bar
-entry = tk.Entry(frame_top, bg="#303134", foreground="#e8eaed" ,borderwidth=0, highlightthickness=1, highlightbackground="#5f6063",highlightcolor="#7a7c80", insertbackground="#e8eaed")
+entry = tk.Entry(frame_top)
 entry.place(relheight=0.7, relwidth=0.5, relx=0)
 entry.bind("<Return>", searcher)
 

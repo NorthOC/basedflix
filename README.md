@@ -1,22 +1,9 @@
 <h2 align='center'>Basedflix</h2>
 <p align='center'><i>"Stream any movie in seconds. Either search for a movie or select from the current top 100 movies from The Pirate Bay!"</i></p>
 
-<div align='center'>
-
-![2 million bobs](.github/big-bob.jpg)
-</div>
-
-## Contributors
-
-<div align='center'>
-<a href="https://github.com/northoc/cliflix/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=northoc/cliflix" />
-</a>
-</div>
-
 ## Dependencies:
 
-1. python3 python3-dev python3-pip
+1. python3
 
 2. npm and nodejs (can be installed using [nvm](https://github.com/nvm-sh/nvm))
 
@@ -38,8 +25,6 @@ What this will do is simple:
 1. Create a virtual Python environment `venv`
 2. Install from `requirements.txt` to the virtual environment
 3. Create a symlink `/usr/local/bin/basedflix`
-
-![pirate pepe](.github/pepe-pirate.png)
 
 That is it! You can launch the program now by typing `basedflix` in your terminal.
 
@@ -73,17 +58,3 @@ Sometimes the movie comes with subtitles. However, if there are no subtitles, yo
 ![Top 100](.github/screen1.png)
 
 ![Batman](.github/screen2.png)
-
-## Roadmap
-
-- Create JSON parser (done)
-- Create Streamer (done)
-- Watch top 100 movies (done)
-- Install script (done)
-- Minimum viable product (done)
-- Simplify Install script (done)
-- Video demo
-- Uninstall script (done)
-- Watch any movie (done)
-- GUI (done)
-- TODO: Update install script
